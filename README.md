@@ -1,39 +1,32 @@
+<!DOCTYPE html>
 <html>
-  <head>
-  </head>
-  <body>
-    <h1>Documentation for Have I Been Pwned API Checker</h1>
-    <p>This script uses the Have I Been Pwned API to check if any email addresses in a given file have been involved in a data breach. It then outputs the results to a JSON file.</p>
-    <h2>Dependencies</h2>
-    <ul>
-      <li>Python 3.x</li>
-      <li>requests library (can be installed using pip)</li>
-      <li>termcolor library (can be installed using pip)</li>
-    </ul>
-    <h2>Usage</h2>
-    <p>The script takes two command-line arguments:</p>
-    <ul>
-      <li>The path to the input file containing email addresses to check, one per line.</li>
-      <li>The path to the output file for the JSON results.</li>
-    </ul>
-    <p>Example usage:</p>
-    <pre><code>python3 email-checker-ti.py </code></pre>
-    <h2>Output Format</h2>
-    <p>The JSON output file contains an array of objects, each representing a breached email address. Each object has the following properties:</p>
-    <ul>
-      <li><code>email</code>: The email address that was breached.</li>
-      <li><code>pwned</code>: A boolean indicating whether the email address was involved in a breach.</li>
-      <li><code>breaches</code>: An array of objects, each representing a breach that the email address was involved in (if any). Each breach object has the following properties:</li>
-      <ul>
-        <li><code>name</code>: The name of the breached website or service.</li>
-        <li><code>domain</code>: The domain of the breached website or service.</li>
-        <li><code>date</code>: The date the breach occurred.</li>
-        <li><code>modified_date</code>: The date the breach was last modified.</li>
-        <li><code>description</code>: A brief description of the breach.</li>
-      </ul>
-    </ul>
-    <p>If an email address was not involved in any breaches, the <code>breaches</code> property will be an empty array.</p>
-  </body>
-</html>
+<head>
+
+
+</head>
+<body>
+	<header>
+		<h1>Email Checker TI Documentation</h1>
+	</header>
+	<main>
+		<h2>Overview</h2>
+		<p>Email Checker TI is a Python script that uses the Have I Been Pwned API to check if email addresses have been compromised in a data breach. It reads a list of email addresses from a text file, checks each address against the Have I Been Pwned API, and outputs the results to a JSON file. The script also includes the option to convert the JSON file to a CSV file.</p>
+less
+Copy code
+	<h2>Installation</h2>
+	<p>To use the Email Checker TI script, you need to have Python 3 and the requests and termcolor libraries installed.</p>
+	<ol>
+		<li>Clone the Email Checker TI repository to your local machine:</li>
+		<code>git clone https://github.com/threatintel-be/email-checker-ti.git</code>
+		<li>Install the required libraries by running the following command:</li>
+		<code>pip install -r requirements.txt</code>
+		<li>Copy or move the emails.txt file containing the list of email addresses to be checked into the email-checker-ti directory.</li>
+		<li>Run the script using the following command:</li>
+		<code>python email_checker_ti.py</code>
+	</ol>
+
+<h2>Usage</h2>
+	<p>The Email Checker TI script can be run from the command line. The default behavior is to check each email address in the emails.txt file against the Have I Been Pwned API and output the results to a JSON file named breaches.json.</p>
+	<p>You can also convert the JSON file to a CSV file by running the convert.py script.
 
 
