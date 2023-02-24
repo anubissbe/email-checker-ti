@@ -1,64 +1,39 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-   
   </head>
   <body>
-    <h1>Have I Been Pwned Email Checker</h1>
-
-<p>This script checks if a list of email addresses have been breached using the Have I Been Pwned API. For each email address in the list, the script sends a request to the Have I Been Pwned API to check if it has been breached. If the email address has been breached, the script adds the breach data to a dictionary, which is then dumped to a JSON file.</p>
-
-<h2>Prerequisites</h2>
-
-<p>Before running the script, you will need:</p>
-
-<ul>
-  <li>Python 3.x installed on your machine</li>
-  <li>A Have I Been Pwned API key, which can be obtained from the <a href="https://haveibeenpwned.com/API/Key">Have I Been Pwned website</a></li>
-</ul>
-
-<h2>Usage</h2>
-
-<ol>
-  <li>Save a list of email addresses to a file called <code>emails.txt</code>, with each email address on a separate line.</li>
-  <li>Open the script file in a text editor and replace <code>your_api_key_here</code> with your actual Have I Been Pwned API key.</li>
-  <li>Save the changes to the script file.</li>
-  <li>Open a terminal or command prompt and navigate to the directory where the script file is located.</li>
-  <li>Run the script using the following command:<br><code>python3 email-checker-ti.py</code><br>Replace <code>email-checker-ti.py</code> with the name of the script file.</li>
-  <li>The script will run and output the results to a file called <code>breaches.json</code>.</li>
-</ol>
-
-<h2>Output</h2>
-
-<p>The script outputs a JSON file called <code>breaches.json</code>, which contains the breach data for each email address in the <code>emails.txt</code> file. The JSON file has the following structure:</p>
-
-<pre><code>{
-"email1@example.com": {
-"pwned": true,
-"breaches": [
-{
-"name": "Breach Name",
-"date": "2020-01-01T00:00:00Z",
-"modified_date": "2020-01-01T00:00:00Z",
-"description": "Breach description"
-},
-{
-"name": "Another Breach",
-"date": "2019-01-01T00:00:00Z",
-"modified_date": null,
-"description": "Another breach description"
-}
-]
-},
-"email2@example.com": {
-"pwned": false,
-"breaches": []
-}
-}</code></pre>
-
-
-<p>The <code>pwned</code> field indicates whether the email address has been breached (<code>true</code>) or not (<code>false</code>). The <code>breaches</code> field is an array of breach objects, which contain the name, date, modified date, and description of each breach. If the email address has not been breached, the <code>breaches</code> field is an array of breach objects, which contain the name, date, modified date, and description of each breach. If the email address has not been breached, the <code>breaches</code> field is an empty array.
-
+    <h1>Documentation for Have I Been Pwned API Checker</h1>
+    <p>This script uses the Have I Been Pwned API to check if any email addresses in a given file have been involved in a data breach. It then outputs the results to a JSON file.</p>
+    <h2>Dependencies</h2>
+    <ul>
+      <li>Python 3.x</li>
+      <li>requests library (can be installed using pip)</li>
+      <li>termcolor library (can be installed using pip)</li>
+    </ul>
+    <h2>Usage</h2>
+    <p>The script takes two command-line arguments:</p>
+    <ul>
+      <li>The path to the input file containing email addresses to check, one per line.</li>
+      <li>The path to the output file for the JSON results.</li>
+    </ul>
+    <p>Example usage:</p>
+    <pre><code>python3 haveibeenpwned.py </code></pre>
+    <h2>Output Format</h2>
+    <p>The JSON output file contains an array of objects, each representing a breached email address. Each object has the following properties:</p>
+    <ul>
+      <li><code>email</code>: The email address that was breached.</li>
+      <li><code>pwned</code>: A boolean indicating whether the email address was involved in a breach.</li>
+      <li><code>breaches</code>: An array of objects, each representing a breach that the email address was involved in (if any). Each breach object has the following properties:</li>
+      <ul>
+        <li><code>name</code>: The name of the breached website or service.</li>
+        <li><code>domain</code>: The domain of the breached website or service.</li>
+        <li><code>date</code>: The date the breach occurred.</li>
+        <li><code>modified_date</code>: The date the breach was last modified.</li>
+        <li><code>description</code>: A brief description of the breach.</li>
+      </ul>
+    </ul>
+    <p>If an email address was not involved in any breaches, the <code>breaches</code> property will be an empty array.</p>
+  </body>
+</html>
 
 
