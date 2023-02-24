@@ -11,8 +11,8 @@
 	<main>
 		<h2>Overview</h2>
 		<p>Email Checker TI is a Python script that uses the Have I Been Pwned API to check if email addresses have been compromised in a data breach. It reads a list of email addresses from a text file, checks each address against the Have I Been Pwned API, and outputs the results to a JSON file. The script also includes the option to convert the JSON file to a CSV file.</p>
-less
-Copy code
+ 
+ part1
 	<h2>Installation</h2>
 	<p>To use the Email Checker TI script, you need to have Python 3 and the requests and termcolor libraries installed.</p>
 	<ol>
