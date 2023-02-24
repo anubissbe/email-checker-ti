@@ -27,6 +27,6 @@
 
 <h2>Usage</h2>
 	<p>The Email Checker TI script can be run from the command line. The default behavior is to check each email address in the emails.txt file against the Have I Been Pwned API and output the results to a JSON file named breaches.json.</p>
-	<p>You can also convert the JSON file to a CSV file by running the convert.py script.
+	
 
 
