@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Have I Been Pwned Email Checker</title>
+   
   </head>
   <body>
     <h1>Have I Been Pwned Email Checker</h1>
-less
-Copy code
+
 <p>This script checks if a list of email addresses have been breached using the Have I Been Pwned API. For each email address in the list, the script sends a request to the Have I Been Pwned API to check if it has been breached. If the email address has been breached, the script adds the breach data to a dictionary, which is then dumped to a JSON file.</p>
 
 <h2>Prerequisites</h2>
@@ -58,6 +57,5 @@ Copy code
 }
 }</code></pre>
 
-css
-Copy code
+
 <p>The <code>pwned</code> field indicates whether the email address has been breache
