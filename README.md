@@ -17,7 +17,7 @@
       <li>The path to the output file for the JSON results.</li>
     </ul>
     <p>Example usage:</p>
-    <pre><code>python3 haveibeenpwned.py </code></pre>
+    <pre><code>python3 email-checker-ti.py </code></pre>
     <h2>Output Format</h2>
     <p>The JSON output file contains an array of objects, each representing a breached email address. Each object has the following properties:</p>
     <ul>
