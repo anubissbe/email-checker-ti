@@ -58,4 +58,7 @@
 }</code></pre>
 
 
-<p>The <code>pwned</code> field indicates whether the email address has been breache
+<p>The <code>pwned</code> field indicates whether the email address has been breached (<code>true</code>) or not (<code>false</code>). The <code>breaches</code> field is an array of breach objects, which contain the name, date, modified date, and description of each breach. If the email address has not been breached, the <code>breaches</code> field is an array of breach objects, which contain the name, date, modified date, and description of each breach. If the email address has not been breached, the <code>breaches</code> field is an empty array.
+
+
+
